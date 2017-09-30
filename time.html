@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" >
+        <title>TimeDisplaying blocks</title>
+        <!-- <link rel="stylesheet" href="time.js"> -->
+    </head>
+    <body>
+            <script type="text/javascript">
+
+        function time(HOUR,MINUTE,PERIOD){
+            if(MINUTE <=30 && PERIOD == "AM"){ 
+                console.log("It's just after " + HOUR + " in the morning");
+            }else if( MINUTE > 30 && PERIOD == "AM"){
+                var newHour = HOUR + 1;
+                console.log("It's almost " + newHour + " in the morning");
+            }else if(MINUTE <=30 && PERIOD == "PM"){
+                console.log("It's just after " + HOUR + " in the evening");
+            }else if( MINUTE > 30 && PERIOD == "PM"){
+                var newHour = HOUR + 1;
+                console.log("It's almost " + newHour + " in the evening");
+            }
+        }
+
+        // var HOUR = 8;
+        // var MINUTE = 50;
+        // var PERIOD = "AM";    
+
+        console.log(time(8,50,"AM"));
+        </script>
+    </body>  
+</html>
